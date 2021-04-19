@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_KEY = 'f8e1f3d9e5b4948898ecf01f191c512e';
+const API_KEY = 'API_KEY';
 
 export const weatherAPI = {
     getWeather(lat, lon, units){
@@ -12,4 +12,4 @@ export const cityAPI = {
     getCity(lat, lon) {
         return axios.get(`http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=4&appid=${API_KEY}`)
     }
-}
+};

@@ -138,10 +138,12 @@ export const requestWeather = (lat, lon, units) => {
     }
 };
 
+//выбираю третий вариант, так как в ответе приходят различные массивы городов и поселков, находящихся рядом, и один из них - якутский поселок. Текущее местоположение чаще всего совпадает с 3 вариантом
+//TODO найти более логичное решение
+
 export const addLocalCity = (lat, lon, units) => {
     return async (dispatch) => {
         let city = await cityAPI.getCity(lat, lon);
-        debugger
         let localCity = {
             id: city.data[3].local_names.id,
             name: city.data[3].local_names.ru,

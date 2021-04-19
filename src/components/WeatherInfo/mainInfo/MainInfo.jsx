@@ -1,6 +1,6 @@
 import style from './MainInfo.module.css'
 import React from "react";
-import Description from "../Description/Description";
+import Description from "../description/Description";
 import cloud from '../../../assets/cloud.svg'
 import partlyCloudy from '../../../assets/partlyCloudy.svg'
 import rain from '../../../assets/rain.svg'
@@ -13,21 +13,26 @@ import {ReactSVG} from "react-svg";
 const MainInfo = (props) => {
 
     let icon;
-
-    if (props.weatherIndicators.weatherMainDescription === 'Clouds' && props.weatherIndicators.weatherDescription === 'облачно с прояснениями') {
-        icon = partlyCloudy;
-    } else if (props.weatherIndicators.weatherMainDescription === 'Clouds') {
-        icon = cloud;
-    } else if (props.weatherIndicators.weatherMainDescription === 'Rain') {
-        icon = rain;
-    }  else if (props.weatherIndicators.weatherMainDescription === 'Thunderstorm') {
-        icon = storm;
-    } else if (props.weatherIndicators.weatherMainDescription === 'Clear') {
-        icon = sun;
-    } else if (props.weatherIndicators.weatherMainDescription === 'Mist') {
-        icon = mist;
-    } else if (props.weatherIndicators.weatherMainDescription === 'Snow') {
-        icon = snow;
+    switch (props.weatherIndicators.weatherMainDescription) {
+        case "Clouds":
+            props.weatherIndicators.weatherDescription === 'облачно с прояснениями' ? icon = partlyCloudy : icon = cloud;
+            break;
+        case "Rain":
+            icon = rain;
+            break;
+        case "Thunderstorm":
+            icon = storm;
+            break;
+        case "Clear":
+            icon = sun;
+            break;
+        case "Mist":
+            icon = mist;
+            break;
+        case "Snow":
+            icon = snow;
+            break;
+        default: break
     }
 
     return <div className={style.mainInfo_wrapper}>

@@ -2,7 +2,6 @@ import {connect} from "react-redux";
 import React, {Component} from "react";
 import WeatherInfoContainer from "./components/WeatherInfoContainer";
 
-
 class App extends Component {
     render() {
         return (

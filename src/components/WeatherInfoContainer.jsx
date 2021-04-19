@@ -1,11 +1,10 @@
 import style from './WeatherContainer.module.css'
 import React from "react";
 import {addLocalCity, changeCityActionCreator, changeUnitActionCreator, requestWeather} from "../redux/weatherReducer";
-import Header from "./Header/Header";
-import MainInfo from "./WeatherInfo/MainInfo/MainInfo";
+import Header from "./header/Header";
+import MainInfo from "./weatherInfo/mainInfo/MainInfo";
 import {connect} from "react-redux";
 import cn from "classnames"
-
 
 class WeatherContainer extends React.Component {
 
@@ -15,16 +14,11 @@ class WeatherContainer extends React.Component {
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props.store.currentCity.id !== prevProps.store.currentCity.id || this.props.store.currentUnit !== prevProps.store.currentUnit) {
-
             this.props.requestWeather(this.props.store.currentCity.lat, this.props.store.currentCity.lon, this.props.store.currentUnit)
         }
     }
 
-
     render() {
-
-
-        console.log(this.props);
 
         return <div className={cn(style.appWrapper,
             {[style.appWrapper_clear]: this.props.weatherIndicators.weatherMainDescription === 'Clear'},
@@ -44,7 +38,6 @@ class WeatherContainer extends React.Component {
     }
 }
 
-
 let mapStateToProps = (store) => (
     {
         currentUnit: store.weather.currentUnit,
@@ -55,7 +48,6 @@ let mapStateToProps = (store) => (
     });
 
 let mapDispatchToProps = (dispatch) => {
-
     return {
         requestWeather: (lat, lon, units) => {
             dispatch(requestWeather(lat, lon, units));

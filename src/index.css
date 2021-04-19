@@ -9,15 +9,11 @@ body {
   height: 100%;
   position: relative;
   font-family: 'Lato', 'PT Sans', sans-serif;
-
-
 }
 
 #root {
   height: 100%;
 }
-
-
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

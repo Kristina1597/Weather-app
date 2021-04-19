@@ -1,43 +1,35 @@
 import style from './Header.module.css'
 import React, {useState} from "react";
-import ChangeCityForm from "./Forms/ChangeCityForm";
-import ChangeUnitsForm from "./Forms/ChangeUnitsForm";
+import ChangeCityForm from "./forms/ChangeCityForm";
+import ChangeUnitsForm from "./forms/ChangeUnitsForm";
 import {ReactSVG} from "react-svg";
 import location from "./../../assets/location.svg"
 import cn from "classnames"
 
-
 const Header = (props) => {
-
-
     let [isEditMode, setEditMode] = useState(false);
     const [isLocalCityChosen, setLocalCityChosen] = useState(false);
 
-    let turnOnEditMode = (e) => {
+    let turnOnEditMode = () => {
         setEditMode(true)
     };
 
-    let turnOffEditMode = (e) => {
+    let turnOffEditMode = () => {
         setEditMode(false)
     };
 
-
     let getPersonalForecast = () => {
-        if (props.localCity[0]) {
-            props.addLocalCity(props.localCity[0], props.localCity[1], props.currentUnit);
-        } else {
-            props.addLocalCity(props.localCity.lat, props.localCity.lon, props.currentUnit)
-        }
-
+        props.localCity && props.localCity.length >= 2
+            ? props.addLocalCity(props.localCity[0], props.localCity[1], props.currentUnit)
+            : props.addLocalCity(props.localCity.lat, props.localCity.lon, props.currentUnit)
     };
 
-    let onChooseLocalCity = (e) => {
+    let onChooseLocalCity = () => {
         getPersonalForecast();
         setLocalCityChosen(true);
     };
 
     return <div className={style.headerWrapper}>
-
         {isEditMode ?
             <div className={style.header_form}>
                 <div className={style.header_form_editState}>
@@ -81,11 +73,7 @@ const Header = (props) => {
                     </button>
                 </div>
             </div>}
-
-
     </div>
-
 };
-
 
 export default Header;
