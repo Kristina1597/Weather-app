@@ -1,0 +1,348 @@
+
+.headerWrapper {
+    position: relative;
+    width: 100%;
+    height: 25%;
+    max-height: 210px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: center;
+}
+
+.header_form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    margin: 78px 85px 0 99px;
+}
+
+.header_form_editState {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-height: 97px;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.header_cityForm {
+    width: 100%;
+    /*height: 79px;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: center;
+}
+
+.header_cityForm_currentCity {
+
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+
+    color: #FFFFFF;
+}
+
+.header_cityForm_settings {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: center;
+}
+
+.cityForm_changeCityButton,
+.cityForm_changeMyLocationButton{
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+
+    border: none;
+    background: none;
+    color: #FFFFFF;
+
+    opacity: 0.6;
+}
+
+.cityForm_changeCityButton:hover,
+.cityForm_changeMyLocationButton:hover {
+    outline: none;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.cityForm_changeCityButton:focus,
+.cityForm_changeMyLocationButton:focus {
+    outline: none;
+}
+
+.cityForm_changeMyLocationButton {
+    margin-left: 29px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
+
+
+.unitForm {
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 29px;
+    max-height: 79px;
+    padding-top: 5px;
+}
+
+
+
+
+
+
+/*Media
+=================
+ */
+
+@media (max-width: 1400px) {
+    .headerWrapper {
+        height: 24%;
+    }
+
+    .header_form {
+        align-items: flex-start;
+        margin: 68px 75px 0 89px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .header_cityForm {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .header_cityForm_currentCity {
+        font-size: 48px;
+    }
+
+    .cityForm_changeCityButton,
+    .cityForm_changeMyLocationButton{
+        font-size: 18px;
+    }
+
+    .cityForm_changeMyLocationButton {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 1200px) {
+    .headerWrapper {
+        height: 23%;
+    }
+
+    .header_form {
+        align-items: flex-start;
+        margin: 58px 63px 0 65px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .header_cityForm {
+        display: flex;
+        flex-direction: row;
+
+        margin-bottom: 2px;
+    }
+
+    .header_cityForm_currentCity {
+        font-size: 48px;
+    }
+
+    .cityForm_changeCityButton,
+    .cityForm_changeMyLocationButton{
+        font-size: 18px;
+    }
+
+    .cityForm_changeMyLocationButton {
+        margin-left: 33px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 1025px) {
+    .headerWrapper {
+        height: 22%;
+    }
+
+    .header_form {
+        align-items: flex-start;
+        margin: 50px 55px 0 57px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .header_cityForm {
+        display: flex;
+        flex-direction: row;
+
+        margin-bottom: 4px;
+    }
+
+    .header_cityForm_currentCity {
+        font-size: 46px;
+    }
+
+
+    .cityForm_changeCityButton,
+    .cityForm_changeMyLocationButton{
+        font-size: 18px;
+    }
+
+    .cityForm_changeMyLocationButton {
+        margin-left: 33px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 769px) {
+    .headerWrapper {
+        height: 21%;
+    }
+
+    .header_form {
+        align-items: flex-start;
+        margin: 40px 37px 0 41px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .header_cityForm {
+        display: flex;
+        flex-direction: row;
+
+        margin-bottom: 6px;
+    }
+
+    .header_cityForm_currentCity {
+        font-size: 44px;
+    }
+
+
+    .cityForm_changeCityButton,
+    .cityForm_changeMyLocationButton{
+        font-size: 18px;
+    }
+
+    .cityForm_changeMyLocationButton {
+        margin-left: 33px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 481px) {
+    .headerWrapper {
+        height: 20%;
+    }
+
+    .header_form {
+        align-items: flex-start;
+        margin: 27px 22px 0 21px;
+    }
+
+    .header_cityForm {
+        display: flex;
+        flex-direction: row;
+        height: 60px;
+        margin-bottom: 12px;
+    }
+
+    .header_cityForm_currentCity {
+        font-size: 33px;
+    }
+
+
+    .cityForm_changeCityButton,
+    .cityForm_changeMyLocationButton{
+        font-size: 18px;
+    }
+
+    .cityForm_changeMyLocationButton {
+        margin-left: 33px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .unitForm {
+        font-weight: bold;
+    }
+
+    .unitForm_mobile {
+        display: none;
+    }
+
+}
+
+@media (max-width: 378px) {
+    .headerWrapper {
+        height: 18%;
+    }
+
+    .header_form {
+        width: 332px;
+        height: 53px;
+        align-items: flex-start;
+        margin: 27px 22px 0 21px;
+    }
+
+    .header_cityForm {
+        display: flex;
+        flex-direction: row;
+        height: 53px;
+        margin-bottom: 10px;
+    }
+
+    .header_cityForm_currentCity {
+        font-size: 30px;
+    }
+
+
+    .cityForm_changeCityButton,
+    .cityForm_changeMyLocationButton{
+        font-size: 15px;
+    }
+
+    .cityForm_changeMyLocationButton {
+        margin-left: 33px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .unitForm {
+        font-weight: bold;
+    }
+
+    .unitForm_mobile {
+        display: none;
+    }
+}

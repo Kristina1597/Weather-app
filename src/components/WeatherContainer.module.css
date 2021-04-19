@@ -1,0 +1,13 @@
+.appWrapper {
+    background-color: #498CEC;
+    height: 100%;
+}
+
+.appWrapper_rain{
+    background-color: #7290B9;
+}
+
+.appWrapper_clear {
+    background-color: #498CEC;
+}
+
