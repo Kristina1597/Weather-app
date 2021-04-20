@@ -10,6 +10,6 @@ export const weatherAPI = {
 
 export const cityAPI = {
     getCity(lat, lon) {
-        return axios.get(`http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=4&appid=${API_KEY}`)
+        return axios.get(`https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=4&appid=${API_KEY}`)
     }
 };
